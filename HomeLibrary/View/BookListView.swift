@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BookListView: View {
+    @Environment(BookListViewModel.self) var viewModel
+    
     var body: some View {
         NavigationStack {
             List {}

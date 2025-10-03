@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+@Observable
+class BookListViewModel {
+    let dataService: DataService
+    
+    init(dataService: DataService) {
+        self.dataService = dataService
+    }
+}

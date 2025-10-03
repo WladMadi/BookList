@@ -6,3 +6,15 @@
 //
 
 import Foundation
+import SwiftData
+
+@Model
+final class Genre {
+    var title: String
+    @Relationship(deleteRule: .nullify) var books: [Book] = []
+    
+    init(title: String) {
+        self.title = title
+    }
+}
+
