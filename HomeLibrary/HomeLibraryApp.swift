@@ -15,7 +15,7 @@ struct HomeLibraryApp: App {
     
     init() {
         let container = try! ModelContainer(for: Book.self, Genre.self, BookReview.self)
-        self.dataService = SwiftDataService(modelContaner: container)
+        self.dataService = SwiftDataService(modelContainer: container)
         self.viewModel = BookListViewModel(dataService: dataService)
     }
     

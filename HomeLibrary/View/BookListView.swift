@@ -9,10 +9,21 @@ import SwiftUI
 
 struct BookListView: View {
     @Environment(BookListViewModel.self) var viewModel
+    @State private var showAddBookForm = false
     
     var body: some View {
         NavigationStack {
-            List {}
+            List(viewModel.books) { book in
+                Text(book.title)
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                        Button {
+                            viewModel.deleteBook(book)
+                        } label: {
+                            Image(systemName: "trash")
+                        }
+                        .tint(.red)
+                    }
+            }
                 .toolbar {
                     ToolbarItem {
                         NavigationLink {
@@ -21,11 +32,25 @@ struct BookListView: View {
                             Image(systemName: "gear")
                         }
                     }
+                    ToolbarItem {
+                        Button {
+                            showAddBookForm = true
+                        } label: {
+                            Image(systemName: "plus")
+                        }
+
+                    }
                 }
+                .blur(radius: showAddBookForm ? 10 : 0)
+                .overlay {
+                    AddBookForm {
+                        showAddBookForm = false
+                        viewModel.fetchBooks()
+                    }
+                    .environment(viewModel)
+                    .offset(y : showAddBookForm ? 0 : 1000)
+                }
+                .animation(.easeInOut, value: showAddBookForm)
         }
     }
-}
-
-#Preview {
-    BookListView()
 }

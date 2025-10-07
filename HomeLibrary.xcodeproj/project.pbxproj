@@ -18,6 +18,8 @@
 		B680464F2E9042BC00F2720C /* BookReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B680464E2E9042BC00F2720C /* BookReview.swift */; };
 		B68046512E9042C200F2720C /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68046502E9042C200F2720C /* Genre.swift */; };
 		B68046532E9044F900F2720C /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68046522E9044F900F2720C /* BookListViewModel.swift */; };
+		B68046652E957D9D00F2720C /* AddBookForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68046642E957D9D00F2720C /* AddBookForm.swift */; };
+		B68046672E957E6600F2720C /* TextFieldMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68046662E957E6600F2720C /* TextFieldMod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		B680464E2E9042BC00F2720C /* BookReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReview.swift; sourceTree = "<group>"; };
 		B68046502E9042C200F2720C /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		B68046522E9044F900F2720C /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
+		B68046642E957D9D00F2720C /* AddBookForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookForm.swift; sourceTree = "<group>"; };
+		B68046662E957E6600F2720C /* TextFieldMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				B68046322E903CB200F2720C /* BookListView.swift */,
+				B68046642E957D9D00F2720C /* AddBookForm.swift */,
+				B68046662E957E6600F2720C /* TextFieldMod.swift */,
 				B680463A2E903D6400F2720C /* SettingsView.swift */,
 			);
 			path = View;
@@ -190,7 +196,9 @@
 				B68046362E903CB200F2720C /* BookListView.swift in Sources */,
 				B680464C2E90424400F2720C /* Book.swift in Sources */,
 				B680463B2E903D6400F2720C /* SettingsView.swift in Sources */,
+				B68046672E957E6600F2720C /* TextFieldMod.swift in Sources */,
 				B680464A2E9041F800F2720C /* SwiftDataService.swift in Sources */,
+				B68046652E957D9D00F2720C /* AddBookForm.swift in Sources */,
 				B68046372E903CB200F2720C /* HomeLibraryApp.swift in Sources */,
 				B68046382E903CB200F2720C /* UserDefaultsService.swift in Sources */,
 				B68046532E9044F900F2720C /* BookListViewModel.swift in Sources */,
