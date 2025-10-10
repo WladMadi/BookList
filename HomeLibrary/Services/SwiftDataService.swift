@@ -14,7 +14,8 @@ protocol DataService {
     func deleteBook(_ book: Book)
 //    func fetchGenres() -> [Genre]
 //    func addGenre(_ name: String)
-//    func addNewReview(for book: Book, text: String, rating: Int)
+    func addNewReview(for book: Book, text: String, rating: Int, date: Date)
+    func deleteReview(for book: Book)
 }
 
 class SwiftDataService: DataService {
@@ -57,8 +58,14 @@ class SwiftDataService: DataService {
 //        
 //    }
 //    
-//    func addNewReview(for book: Book, text: String, rating: Int) {
-//
-//    }
+    func addNewReview(for book: Book, text: String, rating: Int, date: Date) {
+        book.review = BookReview(text: text, rating: rating, date: date)
+        try? modelContext.save()
+    }
+
+    func deleteReview(for book: Book) {
+        book.review = nil
+        try? modelContext.save()
+    }
 }
 
